@@ -10,12 +10,12 @@ Detail Steps:
 Let us start with the first step. Run the below nvidia-docker command to bring up Prometheus UI:
 
 ```
-$nvidia-docker run --name prometheus -d -p 94.130.33.61:9090:9090
+$nvidia-docker run --name prometheus -d -p `hostname -i`:9090:9090
  quay.io/prometheus/prometheus
 f0ef97418f92f54c645678a7837270657f4b6577ce2dde3bf9cac6335b542665
 ```
 
-Browse to 94.130.33.61:9090 to access Prometheus tool
+Browse to <hostname>:9090 to access Prometheus tool
 
 # Building NVIDIA PROMETHEUS Statistics Docker Image
 
