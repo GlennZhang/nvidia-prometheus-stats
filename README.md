@@ -1,9 +1,13 @@
 # nvidia-prometheus-stats
-Scrapes Memory and GPU utilization metrics using NVML and exposes them to Prometheus through a simple HTTP server and/or a push gateway.
 
-Binaries are build with `pyinstaller`.
+Want to scrape Memory & GPU utilization metrics using NVML & exposes them to Prometheus through a simple HTTP server and/or a push gateway- All in a Docker container???? Then you have come to the right place.
 
-Detail Steps:
+# Pre-requisite
+
+- Install NVIDIA-DOCKER
+- A System with GPGPU Card.
+
+<h1>Detail Steps:</h1>
 
 # Building up Prometheus Container:
 
