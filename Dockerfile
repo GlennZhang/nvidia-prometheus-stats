@@ -7,4 +7,4 @@ RUN git clone https://github.com/ajeetraina/nvidia-prometheus-stats
 RUN cd nvidia-prometheus-stats
 
 RUN pip install nvidia-ml-py pyinstaller prometheus_client
-pyinstaller nvidia-prometheus-stats.py     
+RUN pyinstaller nvidia-prometheus-stats.py     
