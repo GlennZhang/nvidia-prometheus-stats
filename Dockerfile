@@ -1,7 +1,7 @@
 
 FROM ubuntu
-RUN apt-get update && \
-    apt-get install git python python-pip 
+RUN apt-get update -y && \
+    apt-get install -y git python python-pip python3-dev python-dev
 
 RUN git clone https://github.com/ajeetraina/nvidia-prometheus-stats
 WORKDIR nvidia-prometheus-stats
