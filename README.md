@@ -30,3 +30,9 @@ $ git clone https://github.com/ajeetraina/nvidia-prometheus-stats
 $ cd nvidia-prometheus-stats
 $ docker build -t ajeetraina/nvidia-gpu-prom
 ```
+
+Running the Metrics Container
+
+```
+$docker run --rm ajeetraina/prometheus-nvidia-hpc /nvidia-prometheus-stats/dist/nvidia-prometheus-stats/nvidia-prometheus-stats -g <prometheus-host>:9090 -p 8080
+```
