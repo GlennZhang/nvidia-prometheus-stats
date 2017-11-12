@@ -14,7 +14,7 @@ Want to scrape Memory & GPU utilization metrics using NVML & exposes them to Pro
 Execute the script `start.sh` as shown below:
 
 ```
-sh start.sh
+sh start_containers.sh
 ```
 
 The above command will start pushgateway, prometheus & Grafana in sequence
@@ -22,7 +22,7 @@ The above command will start pushgateway, prometheus & Grafana in sequence
 ## Pushing the GPU metrics to Prometheus
 
 ```
-python test.py
+python gpu_metrics_exporter.py
 ```
 
 
