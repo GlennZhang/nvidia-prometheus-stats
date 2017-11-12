@@ -80,22 +80,22 @@ def main():
                                registry=registry)
 							   
 							   
-	clock_speed = Gauge('gpu_clock_speed',
-                               'Clock speed in the MHz',
-                               ['device'],
-                               registry=registry)
+    clock_speed = Gauge('gpu_clock_speed',
+                        'Clock speed in the MHz',
+                        ['device'],
+                        registry=registry)
 							   
 							   
-	power_usage = Gauge('gpu_power_usage',
-                               'Power Usage of the GPU in KW',
-                               ['device'],
-                               registry=registry)
+    power_usage = Gauge('gpu_power_usage',
+                        'Power Usage of the GPU in KW',
+                        ['device'],
+                        registry=registry)
 							   
 							   
-	temperature = Gauge('gpu_temperature',
-                               'Temperature of the GPU in degree C',
-                               ['device'],
-                               registry=registry)
+    temperature = Gauge('gpu_temperature',
+                        'Temperature of the GPU in degree C',
+                        ['device'],
+                        registry=registry)
 
     iteration = 0
 
