@@ -143,21 +143,21 @@ def main():
                     memory_utilization.labels(device=i).set(utilization.memory / 100.0)
 					
 					
-					clock_info = nvmlDeviceGetClock(handle,0,0)					
-					clock_speed.labels.set(device=i).set(clock_info.real)
-					log.info('Clock statistics = %s', str(clock_info))
+		    clock_info = nvmlDeviceGetClock(handle,0,0)					
+		    clock_speed.labels.set(device=i).set(clock_info.real)
+		    log.info('Clock statistics = %s', str(clock_info))
 				
-					power_value = nvmlDeviceGetPowerUsage(handle)
-					power_usage.labels.set(device=i).set(power_value.real/1000.0)
-					log.info('Power Usage statistics = %s', str(power_value))
+  		    power_value = nvmlDeviceGetPowerUsage(handle)
+     		    power_usage.labels.set(device=i).set(power_value.real/1000.0)
+		    log.info('Power Usage statistics = %s', str(power_value))
+				
+		    temperature_value = nvmlDeviceGetTemperature(handle)
+		    temperature.labels.set(device=i).set(temperature_value)
+		    log.info('Temperature statistics = %s', str(temperature_value))
 					
-					temperature_value = nvmlDeviceGetTemperature(handle)
-					temperature.labels.set(device=i).set(temperature_value)
-					log.info('Temperature statistics = %s', str(temperature_value))
-					
 				
 				
-				except Exception as e:
+		    except Exception as e:
                     log.info(e, exc_info=True)
 
 
